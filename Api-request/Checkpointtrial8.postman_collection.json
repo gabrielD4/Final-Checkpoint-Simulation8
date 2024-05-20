@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "4a6bdc6b-2aea-4e8c-9ea2-468e2e4cded7",
+		"name": "Checkpointtrial8",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34592708"
+	},
+	"item": [
+		{
+			"name": "create pilot",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"gigi\",\r\n    \"speedRecord\": \"200\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/v1/pilots",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"pilots"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create car",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"plate\":\"3544dghk4\",\r\n    \"maxSpeed\":250,\r\n    \"assignedPilot\": {\r\n        \"id\": 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/v1/cars",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get max speed car",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/v1/cars",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get car by pilot",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/v1/cars/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"cars",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
